@@ -2,16 +2,62 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #252f34;
-    color: white;
+    background-color: #edffdf;
     font-weight: 300;
     min-height: 100%;
-    display: flex;
+    overflow-x: hidden;
 }
 
-body {
-    background-image: url('./bg-violin-xs.jpg');
-    background-size: cover;
+.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-top: 0;
+
+}
+
+.violin {
+    background-position: left;
+    background-attachment: fixed;
+    background-image: url('./leaves-1.png');
+    background-color: rgb(10, 78, 66);
+    aspect-ratio: 1/2;
+    width: min(150px, 50%);
+    margin: 0 auto;
+    transform-origin: center;
+    transform: translateY(-12rem) scale(2.5);
+    -webkit-mask-image: url(hegedu-silhouette.svg);
+    mask-image: url(hegedu-silhouette.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    animation: violin-move 500s infinite linear;
+}
+
+@keyframes violin-move {
+    50% {background-position: right;}
+}
+
+
+@media screen and (min-width: 1023px) {
+    .violin {
+        transform: translateY(3rem) rotate(20deg);
+        position: absolute;
+        right:-130px;
+        width: initial;
+        height: 800px;
+    }
+    .wrapper-in {
+        transform: translateX(
+            min(0px, (calc(-0.2 * calc(100vw - 520px))))
+        );
+    }
+}
+@media screen and (min-width: 1220px) {
+    .violin {
+        height: 1000px;
+        right: -100px;
+    }
 }
 
 p {
@@ -19,7 +65,7 @@ p {
 }
 
 a {
-    color: white;
+    color: black;
 }
 
 a, strong {
@@ -29,12 +75,7 @@ a, strong {
 .wrapper {
     max-width: min(60ch, calc(100% - 3rem));
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
-.wrapper-in {
-    transform: translateX(
-        min(0px, (calc(-0.1 * calc(100vw - 520px))))
-    );
-    text-shadow: black 0 4px 15px;
-}
+
