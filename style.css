@@ -2,14 +2,27 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #edffdf;
+    background-color: #f1ffe6;
     font-weight: 300;
     min-height: 100%;
     overflow-x: hidden;
 }
 
-.title {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    margin-top: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.title {
     font-weight: 100;
     font-size: 4.5rem;
     line-height: 1;
@@ -17,7 +30,22 @@ html, body {
 
 }
 
+.review__stars {
+    margin-top: -1rem;
+    display: block;
+    color:#b79400;
+}
+
+.review-title {
+    margin-bottom: -1rem;
+    margin-top: 4rem;
+}
+.review-title a{
+    font-weight: 300;
+}
+
 .violin {
+    background-size: cover;
     background-position: left;
     background-attachment: fixed;
     background-image: url('./leaves-1.png');
@@ -70,6 +98,7 @@ a {
 
 a, strong {
     font-weight: 600;
+    text-decoration: none;
 }
 
 .wrapper {
