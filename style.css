@@ -107,4 +107,8 @@ a, strong {
     padding: 4rem 0;
 }
 
+video {
+    max-width: 100%;
+}
+
 
